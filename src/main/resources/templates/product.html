@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-    <title>Learning Spring MVC</title>
+    <title>Product</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" type="text/css"  href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
     <script type="text/javascript" src="http://cdn.jsdelivr.net/webjars/org.webjars/jquery/2.1.4/jquery.min.js" th:href="@{http://cdn.jsdelivr.net/webjars/org.webjars/jquery/2.1.4/jquery.min.js}" ></script>
+    <link href="../static/css/spring-core.css" th:href="@{/css/spring-core.css}" rel="stylesheet" media="screen" />
 
 
 </head>
 <body>
 <div class="container">
-    <h1>This Page</h1>ddfbd
+
+    <div th:if="${not #lists.isEmpty(product)}" >
+                <p th:text="${product.id}"></p>
+                <p th:text="${product.decription}"></p>
+                <p th:text="${product.price}"></p>
+                <p th:text="${product.imageUrl}"></p>
+    </div>
+
 </div>
 
 
